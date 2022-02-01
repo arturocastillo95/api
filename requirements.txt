@@ -27,3 +27,4 @@ typing_extensions
 unicodedata2
 uvicorn
 python-dotenv
+pydantic[email]
