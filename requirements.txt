@@ -28,3 +28,4 @@ unicodedata2
 uvicorn
 python-dotenv
 pydantic[email]
+passlib[bcrypt]
