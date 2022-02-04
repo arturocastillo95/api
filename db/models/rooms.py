@@ -16,7 +16,7 @@ class Room(Base):
     created_at      = Column(DateTime, nullable=False)
     updated_at      = Column(DateTime, nullable=False)
     available       = Column(Boolean, nullable=False, default=True)
-    location        = relationship("Location", back_populates="rooms", uselist=False)
+    location        = relationship("Location", back_populates="room", uselist=False)
     images          = relationship("RoomImage", back_populates="room")
     owner_id        = Column(Integer, ForeignKey("users.id"), nullable=False)
     owner           = relationship("User", back_populates="rooms")
@@ -47,3 +47,4 @@ class Location(Base):
     created_at      = Column(DateTime, nullable=False)
     updated_at      = Column(DateTime, nullable=False)
     room_id         = Column(Integer, ForeignKey("rooms.id"), nullable=False)
+    room            = relationship("Room", back_populates="location")

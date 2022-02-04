@@ -1,8 +1,8 @@
 from passlib.context import CryptContext
 
-pass_context = CryptContext(schemes=["bcrypt"], deprecated="auto"):
+pass_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-class Hashing():
+class Hasher():
     @staticmethod
     def verify_password(password, hashed_password):
         return pass_context.verify(password, hashed_password)
